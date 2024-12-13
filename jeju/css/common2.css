@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+@import url(./webfont.css);
+
+/* 초기화 */
+body, h1, h2, h3,p,ul,figure {margin:0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+html {font:10px;}
+
+.hidden {
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
+
+body {
+    margin: 0 auto;
+    margin: 8 auto 0;
+    width: 960px;
+    font-size: 1em;
+    font-family: 'yg-jalnan';
+    border: 1px solid #e7e7e7;
+    background: linear-gradient(180deg, #87ceeb, #fff) repeat-x;
+    display:flex; flex-wrap: wrap;
+}
+
+/* header */
+#header {width: 100%; height: 280px; background: url(../images/bg_header.png);}
+#header h1 {
+    padding: 40px 0 0 20px;
+    color:#fff;
+    font-size: 4em;
+}
+
+#gnb {width: 100%;}
+#gnb ul {display: flex;}
+#gnb ul li {width: 25%;}
+#gnb ul li a {
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    background: #080;
+    color:#fff;
+    transition: 0.5s;
+}
+#gnb ul li a:hover {color:#072b07; background: #fff;}
+
+/* main */
+main {width:740px; background: #fff;}
+
+/* content */
+#content {padding: 30px 10px;}
+#content h2 {}
+#content article {}
+#content article h3 { margin: 15px 0;}
+#content article p {padding: 10px; font-size: 13px;}
+
+/* photo */
+#photo {width: 218px; background: #9ad39b;}
+#photo figure {
+        height:100%;
+        display: flex; flex-flow: column wrap;
+        align-items: center; justify-content: center;
+        row-gap: 10px;
+}
+#photo figure img {width: 200px; border: 1px solid #000}
+
+/* footer */
+#footer {
+    width: 100%;
+    padding: 10px;
+    background: #072b07; color:#fff;
+    text-align: center;
+}
+
+/* TABLET (600-1023px) */
+@media screen and (max-width:1023px) {
+    body {width: 100%;}
+    main {width: 100%;}
+    #photo {width:100%; padding:20px}
+    #photo figure {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    #photo figure img {width:25%;}
+}
+
+@media screen and (max-width:599px) {
+    body {
+        margin: 0; border: 0;
+        background: none;
+    }
+    #header {
+        background: #000;
+        height: 75px;}
+    #header h1 {
+        padding: 0;
+        font-size: 2rem;
+        text-align: center;
+        line-height: 75px;
+    }
+    #gnb {}
+    #gnb ul {display:block; margin: 14px 20px;}
+    #gnb ul li {width: auto; }
+    #gnb ul li a {
+        width: 100%; border: 2px solid #000;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    #photo figure {flex-direction: column;}
+    #photo figure img {width: 100%;}
+}
