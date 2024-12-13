@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {background: #9896f1;}
+        div {text-align: center;}
+        h1 {font-size: 3em; color: #000;}
+        p {font-size:2em;}
+        img {width: 80%;}
+
+        /* @media all and (min-width:1201px) and (max-width:1599px) {body {background:#edb1f1;}} */
+        
+        /* (and 앞뒤 띄어쓰기 소괄호세미콜론X) */
+        
+        /* ex) 태블릿 1200이하 */
+        @media all and (max-width:1200px) {
+                body {background:#edb1f1;}
+                h1 {font-size:3em;}
+                p {font-size:2em;}
+        }
+        /* ex) 스마트폰 599 이하 */
+        @media all and (max-width:599px) {
+            body {background: #8ef6e4;}
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Heading1</h1>
+            <p>This is simply dummy text.</p>
+            <img src="./imges/purpleRoom.jpg" alt="purpleroom">
+        
+    </div>
+</body>
+</html>
